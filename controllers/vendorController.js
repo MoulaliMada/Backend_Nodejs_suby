@@ -44,7 +44,7 @@ const vendorLogin = async (req, res) => {
     }
 
     const token = jwt.sign({ vendorId: loginVendor._id }, secreteKey, {
-      expiresIn: "1h",
+      expiresIn: "10h",
     });
     res.status(200).json({ success: "Login Successfully", token });
 
